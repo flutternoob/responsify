@@ -8,7 +8,7 @@ class DeviceInformationModel {
   final Orientation? orientation;
 
   ///Used to determine the device type in accordance with the DeviceTypeInformation enum
-  final DeviceTypeInformation? deviceTypeInformation;
+  final DeviceTypeInformation? deviceType;
 
   ///Used to determine the device's brightness.
   ///On Windows devices with dark mode, the Platform Brightness is incorrectly indicated as
@@ -25,7 +25,7 @@ class DeviceInformationModel {
   ///Constructor for this class
   DeviceInformationModel(
       {this.orientation,
-        this.deviceTypeInformation,
+        this.deviceType,
         this.platformBrightness,
         this.parentWidgetSize,
         this.localWidgetWidth,

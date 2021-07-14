@@ -33,7 +33,7 @@ DeviceTypeInformation determineDeviceType(MediaQueryData? mediaQueryData,
   num calculateDeviceSize() {
     ///Online research showed that a device pixel ratio of 1 = 160 pixel density. This was used as a
     ///reference point for determining the device type. Older devices had a pixel density lower
-    ///than 160 (such as 112 or 96). The following if...else block takes this into account and runs some
+    ///than 160 (such as 120 or 96). The following if...else block takes this into account and runs some
     ///simple calculations to return the the device size
     ///if block if device pixel ratio is > or < 1
     if (devicePixelRatio > 1 || devicePixelRatio < 1) {
@@ -115,20 +115,3 @@ DeviceTypeInformation determineDeviceType(MediaQueryData? mediaQueryData,
   ///Return the device type back to the DeviceInfoWidget
   return deviceType!;
 }
-
-///Note:
-///1) The benchmarks for determining thresholds for device screen sizes were determined by
-///performing a search for minimum and maximum screen sizes for each device
-///2) Currently, there is no API built into Flutter to determine if the Platform OS is a WearOS or tvOS
-///3) Foldable devices such as the Microsoft Surface PRO, foldable phones and foldable tablets
-///have not been taken into account
-///4) There currently is no way to test this library on Apple and Linux devices
-
-///References
-///https://material.io/blog/device-metrics
-///https://developer.android.com/training/multiscreen/screendensities
-///https://www.calculatorsoup.com/calculators/technology/ppi-calculator.php
-///https://groups.google.com/g/flutter-dev/c/oYN_prI7sio
-///https://medium.com/flutter-community/the-best-flutter-responsive-ui-pattern-ba52875d70cd
-///https://stackoverflow.com/questions/49307677/how-to-get-height-of-a-widget
-///https://github.com/flutter/flutter/issues/14488

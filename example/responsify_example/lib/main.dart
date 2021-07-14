@@ -35,19 +35,18 @@ class DeviceInformation extends StatelessWidget {
             builder: (context, deviceInformation) {
               @override
               String toString() {
-                return "Device Type: ${deviceInformation.deviceTypeInformation}\n"
+                return "Device Type: ${deviceInformation.deviceType}\n"
                     "Device Orientation: ${deviceInformation.orientation}\n"
                     "Platform Brightness: ${deviceInformation.platformBrightness}\n"
                     "Parent Widget Size: ${deviceInformation.parentWidgetSize}\n"
                     "Local Widget Size (W x H): ${deviceInformation.localWidgetWidth} x ${deviceInformation.localWidgetHeight}";
               }
-              //String deviceInfo = toString();
               ///Different UI for different devices. Here the string in the Text widget and the font size
               ///is different for Wearables and other devices
               ///Different app layouts can be implemented based on device type
-              if (deviceInformation.deviceTypeInformation == DeviceTypeInformation.WEARABLE){
+              if (deviceInformation.deviceType == DeviceTypeInformation.WEARABLE){
                 return Text(
-                  "Device Type: ${deviceInformation.deviceTypeInformation}\n"
+                  "Device Type: ${deviceInformation.deviceType}\n"
                       "Platform Brightness: ${deviceInformation.platformBrightness}\n"
                       "Parent Widget Size: ${deviceInformation.parentWidgetSize}\n"
                       "Local Widget Size (W x H): ${deviceInformation.localWidgetWidth} x ${deviceInformation.localWidgetHeight}",

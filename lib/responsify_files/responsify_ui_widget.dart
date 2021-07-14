@@ -6,8 +6,6 @@ import "package:responsify/responsify_files/responsify_model.dart";
 import "package:responsify/responsify_files/responsify_function.dart";
 
 ///The ResponsiveUiWidget is used as a wrapper for any widget to which responsive design has to be applied
-///By design, sizing information cannot be obtained for widgets that have unbounded widths and heights
-///This applicable to Row, Column and Scrollable widgets
 class ResponsiveUiWidget extends StatefulWidget {
   ///The builder Widget function is needed to get a widget's context and the device information
   ///based on the DeviceInformation class
@@ -61,7 +59,7 @@ class _ResponsiveUiWidgetState extends State<ResponsiveUiWidget> {
 
               ///Passing the mediaQueryData parameter to the getDeviceType function to determine
               ///the device type
-              deviceTypeInformation: determineDeviceType(mediaQueryData, widget.targetOlderComputers),
+              deviceType: determineDeviceType(mediaQueryData, widget.targetOlderComputers),
               platformBrightness: mediaQueryData.platformBrightness,
               parentWidgetSize: Size(boxConstraints.maxWidth, boxConstraints.maxHeight),
               localWidgetWidth: localWidgetWidth,
