@@ -27,6 +27,7 @@ A new Flutter package for creating Responsive UI based on device type
   This result, along with the device's Platform OS, is used to determine the device type (Mobile, Tablet, Wearable, Computer)
 * If the above three points sound confusing, here is the code block:<BR>
 ```
+    ///The checkHandheldDevicePlatform flag is used to determine a Handheld device's OS Platform
     bool checkHandheldDevicePlatform = Platform.isAndroid || Platform.isIOS || Platform.isFuchsia;
 
     ///The checkComputerPlatform flag is used to determine a Computer device's OS Platform
