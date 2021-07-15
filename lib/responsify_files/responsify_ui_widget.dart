@@ -9,7 +9,7 @@ import "package:responsify/responsify_files/responsify_function.dart";
 class ResponsiveUiWidget extends StatefulWidget {
   ///The builder Widget function is needed to get a widget's context and the device information
   ///based on the DeviceInformation class
-  final Widget Function(BuildContext context, DeviceInformationModel deviceInformation)? builder;
+  final Widget Function(BuildContext context, DeviceInformation deviceInformation)? builder;
 
   ///Used to target older or newer computers. If targeting older computers the value should be true
   ///If targeting newer computers, the value should be false
@@ -54,12 +54,12 @@ class _ResponsiveUiWidgetState extends State<ResponsiveUiWidget> {
         builder: (context, boxConstraints) {
 
           ///Passing information about the device to the DeviceInformation class constructor
-          DeviceInformationModel deviceInformation = DeviceInformationModel(
+          DeviceInformation deviceInformation = DeviceInformation(
               orientation: mediaQueryData.orientation,
 
               ///Passing the mediaQueryData parameter to the getDeviceType function to determine
               ///the device type
-              deviceType: determineDeviceType(mediaQueryData, widget.targetOlderComputers),
+              deviceTypeInformation: determineDeviceType(mediaQueryData, widget.targetOlderComputers),
               platformBrightness: mediaQueryData.platformBrightness,
               parentWidgetSize: Size(boxConstraints.maxWidth, boxConstraints.maxHeight),
               localWidgetWidth: localWidgetWidth,

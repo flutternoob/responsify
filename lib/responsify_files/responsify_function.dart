@@ -7,7 +7,7 @@ import "package:responsify/responsify_files/responsify_enum.dart";
 ///This function is used to determine the device type, using the device's width and height in logical
 ///pixels, its pixel ratio, PPI and OS Platform
 DeviceTypeInformation determineDeviceType(MediaQueryData? mediaQueryData,
-    [bool? targetOlderComputers]) {
+    bool? targetOlderComputers) {
   ///Variable for device type based on the DeviceTypeInformation enum
   DeviceTypeInformation? deviceType;
 
