@@ -105,12 +105,12 @@ class DeviceInformation extends StatelessWidget {
 
 ## Screenshots
 
-![Responsify - Mobile (portrait)](screenshots/Responsify_mobile_portrait.png)<BR>
-![Responsify - Mobile (landscape)](screenshots/Responsify_mobile_landscape.png)<BR>
-![Responsify - Tablet (portrait)](screenshots/Responsify_tablet_portrait.png)<BR>
-![Responsify - Tablet (landscape)](screenshots/Responsify_tablet_landscape.png)<BR>
-![Responsify - Wearable](screenshots/Responsify_wearable.png)<BR>
-![Responsify - Computer](screenshots/Responsify_computer.png)<BR>
+<img src = "https://raw.githubusercontent.com/flutternoob/responsify/master/screenshots/Responsify_mobile_portrait.png"><BR><BR>
+<img src = "https://raw.githubusercontent.com/flutternoob/responsify/master/screenshots/Responsify_mobile_landscape.png"><BR><BR>
+<img src = "https://raw.githubusercontent.com/flutternoob/responsify/master/screenshots/Responsify_tablet_portrait.png"><BR><BR>
+<img src = "https://raw.githubusercontent.com/flutternoob/responsify/master/screenshots/Responsify_tablet_landscape.png"><BR><BR>
+<img src = "https://raw.githubusercontent.com/flutternoob/responsify/master/screenshots/Responsify_wearable.png"><BR><BR>
+<img src = "https://raw.githubusercontent.com/flutternoob/responsify/master/screenshots/screenshots/Responsify_computer.png"><BR>
 
 ## Note
 
