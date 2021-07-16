@@ -1,5 +1,5 @@
-import "package:flutter/material.dart";
-import "package:responsify/responsify_files/responsify_enum.dart";
+import 'package:flutter/material.dart';
+import 'package:responsify/responsify_files/responsify_enum.dart';
 
 ///The DeviceInformationModel is used to retrieve basic information about the device, some of which
 ///are available via the Flutter SDK.
@@ -23,12 +23,12 @@ class DeviceInformation {
   final double? localWidgetHeight;
 
   ///Constructor for this class
-  DeviceInformation(
-      {this.orientation,
-        this.deviceTypeInformation,
-        this.platformBrightness,
-        this.parentWidgetSize,
-        this.localWidgetWidth,
-        this.localWidgetHeight,
-      });
+  DeviceInformation({
+    this.orientation,
+    this.deviceTypeInformation,
+    this.platformBrightness,
+    this.parentWidgetSize,
+    this.localWidgetWidth,
+    this.localWidgetHeight,
+  });
 }

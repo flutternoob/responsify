@@ -2,7 +2,7 @@
 
 A new Flutter package for creating Responsive UI based on device type
 
-# Overview of this library
+## Overview of this library
 
 * The ```responsify``` package is a pure Dart package based on [this](https://medium.com/flutter-community/the-best-flutter-responsive-ui-pattern-ba52875d70cd) tutorial by FilledStacks.
 * With this library, you can:<BR>
@@ -12,7 +12,7 @@ A new Flutter package for creating Responsive UI based on device type
   * Get the parent widget's size (Width X Height)<BR>
   * Get the child widget's size (Width X Height)<BR>
   
-# How this library works
+## How this library works
 
 * The library has a single widget, known as the ```ResponsiveUiWidget``` that returns a widget in its ```build``` method<BR>
 * The library takes the device's pixel density into account. It is determined using the device's pixel ratio and a baseline pixel density
@@ -54,7 +54,7 @@ A new Flutter package for creating Responsive UI based on device type
 * The thresholds for device screen sizes were determined by performing a search for minimum and maximum screen sizes for each device. 
   As such, you do not have to specify thresholds for device sizes<BR>
 
-# Usage
+## Usage
 
 1) Add ```responsify``` to your ```pubspec.yaml``` and run ```pub get```<BR>
 2) Import ```responsify.dart``` into your project, like so:<BR>
@@ -85,9 +85,9 @@ class DeviceInformation extends StatelessWidget {
               if (deviceInformation.deviceTypeInformation == DeviceTypeInformation.WEARABLE){
                 return Text(
                   "Device Type: ${deviceInformation.deviceTypeInformation}\n"
-                      "Platform Brightness: ${deviceInformation.platformBrightness}\n"
-                      "Parent Widget Size: ${deviceInformation.parentWidgetSize}\n"
-                      "Local Widget Size (W x H): ${deviceInformation.localWidgetWidth} x ${deviceInformation.localWidgetHeight}",
+                  "Platform Brightness: ${deviceInformation.platformBrightness}\n"
+                  "Parent Widget Size: ${deviceInformation.parentWidgetSize}\n"
+                  "Local Widget Size (W x H): ${deviceInformation.localWidgetWidth} x ${deviceInformation.localWidgetHeight}",
                   style: const TextStyle(fontSize: 8),
                 );
               } else {
@@ -103,14 +103,14 @@ class DeviceInformation extends StatelessWidget {
 }
 ```
 
-# Screenshots
+## Screenshots
 
-[Responsify - Mobile (portrait)](screenshots/Responsify_mobile_portrait.png)<BR>
-[Responsify - Mobile (landscape)](screenshots/Responsify_mobile_landscape.png)<BR>
-[Responsify - Tablet (portrait)](screenshots/Responsify_tablet_portrait.png)<BR>
-[Responsify - Tablet (landscape)](screenshots/Responsify_tablet_landscape.png)<BR>
-[Responsify - Wearable](screenshots/Responsify_wearable.png)<BR>
-[Responsify - Computer](screenshots/Responsify_computer.png)<BR>
+![Responsify - Mobile (portrait)](screenshots/Responsify_mobile_portrait.png)<BR>
+![Responsify - Mobile (landscape)](screenshots/Responsify_mobile_landscape.png)<BR>
+![Responsify - Tablet (portrait)](screenshots/Responsify_tablet_portrait.png)<BR>
+![Responsify - Tablet (landscape)](screenshots/Responsify_tablet_landscape.png)<BR>
+![Responsify - Wearable](screenshots/Responsify_wearable.png)<BR>
+![Responsify - Computer](screenshots/Responsify_computer.png)<BR>
 
 # Note
 
@@ -120,11 +120,11 @@ class DeviceInformation extends StatelessWidget {
   via an emulator or a physical device<BR>
 * I currently have no way to test this library on Apple and Linux devices<BR>
 
-# Known Issues
+## Known Issues
 
-* For a Windows device which has dark mode enabled, the Platform brightness is identified as light mode. I do not know why.<BR>
+* For a Windows computer that has dark mode enabled, the Platform brightness is identified as light mode. I do not know why.<BR>
 
-# References
+## References
 
 1) [https://material.io/blog/device-metrics](https://material.io/blog/device-metrics)
 2) [https://developer.android.com/training/multiscreen/screendensities](https://developer.android.com/training/multiscreen/screendensities)
@@ -134,6 +134,6 @@ class DeviceInformation extends StatelessWidget {
 6) [https://stackoverflow.com/questions/49307677/how-to-get-height-of-a-widget](https://stackoverflow.com/questions/49307677/how-to-get-height-of-a-widget)
 7) [https://github.com/flutter/flutter/issues/14488](https://github.com/flutter/flutter/issues/14488)
 
-# Conclusion
+## Conclusion
 
 I hope this library is useful for those who want an easy way to create different layouts based on device type. PRs are welcome.

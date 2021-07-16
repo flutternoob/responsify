@@ -1,13 +1,13 @@
-import "dart:io";
-import "dart:math";
+import 'dart:io';
+import 'dart:math';
 
-import "package:flutter/material.dart";
-import "package:responsify/responsify_files/responsify_enum.dart";
+import 'package:flutter/material.dart';
+import 'package:responsify/responsify_files/responsify_enum.dart';
 
 ///This function is used to determine the device type, using the device's width and height in logical
 ///pixels, its pixel ratio, PPI and OS Platform
-DeviceTypeInformation determineDeviceType(MediaQueryData? mediaQueryData,
-    bool? targetOlderComputers) {
+DeviceTypeInformation determineDeviceType(
+    MediaQueryData? mediaQueryData, bool? targetOlderComputers) {
   ///Variable for device type based on the DeviceTypeInformation enum
   DeviceTypeInformation? deviceType;
 
@@ -62,7 +62,8 @@ DeviceTypeInformation determineDeviceType(MediaQueryData? mediaQueryData,
     else {
       ///No need to determine resolution as in the above if block when device pixel ratio = 1
       ///Device pixel ratio = 1 if device dots per inch (DPI) = 160 (baseline)
-      diagonalPixels = sqrt(pow(deviceLogicalWidth, 2) + pow(deviceLogicalHeight, 2));
+      diagonalPixels =
+          sqrt(pow(deviceLogicalWidth, 2) + pow(deviceLogicalHeight, 2));
       devicePixelDensity = 160;
     }
 
@@ -78,20 +79,26 @@ DeviceTypeInformation determineDeviceType(MediaQueryData? mediaQueryData,
 
     ///The checkHandheldDevicePlatform flag is used to determine a Handheld
     ///device's OS Platform
-    bool checkHandheldDevicePlatform = Platform.isAndroid || Platform.isIOS || Platform.isFuchsia;
+    bool checkHandheldDevicePlatform =
+        Platform.isAndroid || Platform.isIOS || Platform.isFuchsia;
 
     ///The checkComputerPlatform flag is used to determine a Computer device's OS Platform
     ///Here a Computer may be any Desktop or Laptop/Notebook device that runs either Windows,
     ///macOS or Linux
-    bool checkComputerPlatform = Platform.isWindows || Platform.isMacOS || Platform.isLinux;
+    bool checkComputerPlatform =
+        Platform.isWindows || Platform.isMacOS || Platform.isLinux;
 
     ///if...else block used to determine the device type based on the DeviceType enum and the
     ///DeviceInformation class. All threshold values are in inches
     if (deviceSize! <= 3) {
       return deviceType = DeviceTypeInformation.WEARABLE;
-    } else if (deviceSize! > 3 && deviceSize! < 7.1 && checkHandheldDevicePlatform) {
+    } else if (deviceSize! > 3 &&
+        deviceSize! < 7.1 &&
+        checkHandheldDevicePlatform) {
       return deviceType = DeviceTypeInformation.MOBILE;
-    } else if (deviceSize! > 7.1 && deviceSize! < 13.5 && checkHandheldDevicePlatform) {
+    } else if (deviceSize! > 7.1 &&
+        deviceSize! < 13.5 &&
+        checkHandheldDevicePlatform) {
       return deviceType = DeviceTypeInformation.TABLET;
 
       ///The baseline pixel density of 160 cannot be applied to devices whose pixel densities < 160
@@ -101,7 +108,9 @@ DeviceTypeInformation determineDeviceType(MediaQueryData? mediaQueryData,
       ///Hence, DeviceTypeInformation.COMPUTER is returned based on the Platform enum and the
       ///targetOlderComputers flag for older computers.
       ///For newer computers, the Pythogorean calculation is taken into account
-    } else if ((deviceSize! > 13.5 && deviceSize! < 55 && checkComputerPlatform) ||
+    } else if ((deviceSize! > 13.5 &&
+            deviceSize! < 55 &&
+            checkComputerPlatform) ||
         (targetOlderComputers! && checkComputerPlatform)) {
       return deviceType = DeviceTypeInformation.COMPUTER;
     } else {
