@@ -112,7 +112,7 @@ class DeviceInformation extends StatelessWidget {
 ![Responsify - Wearable](screenshots/Responsify_wearable.png)<BR>
 ![Responsify - Computer](screenshots/Responsify_computer.png)<BR>
 
-# Note
+## Note
 
 * The benchmarks for determining thresholds for device screen sizes were determined by<BR>
   performing a Google search for minimum and maximum screen sizes for each device type<BR>
