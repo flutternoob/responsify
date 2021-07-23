@@ -103,7 +103,7 @@ class DeviceInformation extends StatelessWidget {
 }
 ```
 
-4) Another example, using ```MaterialPageRoute``` and ```PageRouteBuilder```:
+4) Another example, using ```MaterialPageRoute``` and ```PageRouteBuilder```: <BR><BR>
 
 ```
 class ResponsifyApp extends StatelessWidget {
