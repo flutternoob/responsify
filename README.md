@@ -103,6 +103,95 @@ class DeviceInformation extends StatelessWidget {
 }
 ```
 
+4) Another example, using ```MaterialPageRoute``` and ```PageRouteBuilder```:
+
+```
+class ResponsifyApp extends StatelessWidget {
+  ResponsifyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        MaterialButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ResponsiveUiWidget(
+                    targetOlderComputers: false,
+                    builder: (context, deviceInformation) {
+                      if (deviceInformation.deviceTypeInformation == DeviceTypeInformation.MOBILE) {
+                        return MobileVersion();
+                      } else {
+                        return Scaffold(
+                          body: Center(
+                            child: Text("This app is compatible only with a Mobile device"),
+                          ),
+                        );
+                      }
+                    }),
+              ),
+            );
+          },
+          textColor: Colors.white,
+          child: Text("Mobile"),
+          color: Colors.black,
+        ),
+        MaterialButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              PageRouteBuilder(
+                pageBuilder: (_, __, ___) => ResponsiveUiWidget(
+                  targetOlderComputers: false,
+                  builder: (context, deviceInformation) {
+                    if (deviceInformation.deviceTypeInformation == DeviceTypeInformation.TABLET) {
+                      return TabletVersion();
+                    } else {
+                      return Scaffold(
+                        body: Center(
+                          child: Text("This app is compatible only with a Tablet device"),
+                        ),
+                      );
+                    }
+                  },
+                ),
+              ),
+            );
+          },
+          textColor: Colors.white,
+          child: Text("Tablet"),
+          color: Colors.black,
+        )
+      ]),
+    );
+  }
+}
+
+class MobileVersion extends StatelessWidget {
+  const MobileVersion({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(child: Text("This is a Mobile Device")),
+    );
+  }
+}
+
+class TabletVersion extends StatelessWidget {
+  const TabletVersion({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(child: Text("This is a Tablet Device")),
+    );
+  }
+}
+```
+
 ## Screenshots
 
 <img src = "https://raw.githubusercontent.com/flutternoob/responsify/master/screenshots/Responsify_mobile_portrait.png"><BR><BR>
