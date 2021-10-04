@@ -14,3 +14,8 @@
 ## 1.0.0+3
 
 * Updated README.md 
+
+## 1.0.0+4
+
+* Fixed grammatical errors in README.md
+* Fixed broken library's Github issues link

@@ -23,7 +23,7 @@ A new Flutter package for creating Responsive UI based on device type
   Platform OS (Windows, macOS, Linux) is used to determine if the device is a computer. If false, the device type is determined to be a computer
   using the Pythogoras theorem (see the next point) along with the Platform OS<BR>
 * The Pythogoras theorem is used to calculated the diagonal dimensions of the device screen in pixels. This resulting value is then
-  used with the device pixel density is used to determine the size in inches. Device Screen Size (inches) = Device Screen Size (pixels)/Device pixel density (PPI).
+  used with the device pixel density to determine the diagonal screen size in inches. Device Screen Size (inches) = Device Screen Size (pixels)/Device pixel density (PPI).
   This result, along with the device's Platform OS, is used to determine the device type (Mobile, Tablet, Wearable, Computer)
 * If the above three points sound confusing, here is the code block:<BR>
 ```
@@ -51,7 +51,7 @@ A new Flutter package for creating Responsive UI based on device type
     }
 ```
 * Device pixel density = Device pixel ratio * 160. The Device Pixel Ratio is retrieved using MediaQuery<BR>
-* The thresholds for device screen sizes were determined by performing a search for minimum and maximum screen sizes for each device. 
+* The thresholds for device screen sizes were determined by performing a search for minimum and maximum screen sizes for each device type. 
   As such, you do not have to specify thresholds for device sizes<BR>
 
 ## Usage
