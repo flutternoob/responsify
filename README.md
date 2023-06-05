@@ -203,7 +203,6 @@ class TabletVersion extends StatelessWidget {
   performing a Google search for minimum and maximum screen sizes for each device type<BR>
 * This library has not been tested on Microsoft Surface devices, but has been tested on an emulated foldable phone<BR>
 * I currently have no way to test this library on Linux devices<BR>
-* The black areas in the new screenshots appeared when taking them via the Emulator and Simulator on my Mac. As such they do not appear when debugging on the emulator and simulator and in production code<BR>
 
 ## Known Issues
 
