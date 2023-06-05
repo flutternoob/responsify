@@ -26,3 +26,7 @@
 * Fixed "The '!' will have no effect because the receiver can't be null." warning
 * Added iOS and Foldable phone screenshots
 * Updated example and Readme with example code
+
+## 1.0.1+6
+
+* Updated closed foldable device screenshot
